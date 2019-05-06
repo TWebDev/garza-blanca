@@ -1,0 +1,43 @@
+.navbar-item img {
+  max-height: 4rem;
+}
+
+.navbar-item {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: azure;
+  margin: 2px;
+}
+
+.navbar {
+  box-shadow: inset 0px 80px 50px rgba(53, 88, 106, 1);
+  background-color: transparent;
+}
+
+.container {
+  height: 100px;
+}
+
+.button {
+  font-size: 13px;
+  border-radius: 0px;
+  background-color: #05CCAF;
+  border: 0px;
+  margin-left: 25px;
+  color:azure;
+}
+
+.gap {
+  position: relative;
+  top:-100px;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: rgb(3, 165, 141);
+}
+
+a.navbar-item:hover {
+  background-color: transparent;
+  color:rgb(173, 184, 184);
+}
