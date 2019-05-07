@@ -1,8 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './Container/App';
-import '../node_modules/paroller.js'
-import '../node_modules/bulma/css/bulma.css'
+import '../node_modules/bulma/css/bulma.css';
 import './index.css';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux'
+import reducers from './redux/reducers'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    <Provider 
+    store={createStore(reducers)}>
+        <App />
+    </Provider>
+    , document.getElementById('root')
+);

@@ -23,21 +23,117 @@
   border-radius: 0px;
   background-color: #05CCAF;
   border: 0px;
-  margin-left: 25px;
   color:azure;
 }
 
+.button-nav {
+  margin-left: 25px;
+}
+
+.button-content {
+  font-size: 16px;
+}
+
 .gap {
-  position: relative;
+  position: absolute;
   top:-100px;
   width: 100%;
 }
 
+.wrapper {
+  width: 100%;
+}
+
+.card {
+  font-family: 'Montserrat';
+  font-weight: 800;
+  padding: 100px;
+  border-radius: 0px;
+  width: 100%;
+}
+
+.first {
+  margin-top: 100px;
+}
+
+.is-transparent {
+  background-color: transparent;
+  box-shadow: none;
+  color: azure;
+  text-align: center;
+  padding: 200px;
+}
+
+.is-gold {
+  background-color: #7F724D;
+  box-shadow: none;
+  color: azure;
+}
+
+.h1 {
+  font-size: 24px;
+  margin: 16px;
+}
+
 .button:hover {
   background-color: rgb(3, 165, 141);
+  color: azure;
 }
 
 a.navbar-item:hover {
   background-color: transparent;
+  color:rgb(173, 184, 184);
+}
+
+body {
+  background-color: rgba(53, 88, 106, 1);
+}
+
+.box-text {
+  margin: 40px 0 40px 0;
+}
+
+.title {
+  font-size: 48px;
+  color: azure;
+  margin-left: 3rem;
+  font-weight: 800;
+}
+
+.image {
+  height: 380px;
+}
+
+.is-dblue {
+  background-color: #35586A;
+  padding: 0 60px;
+}
+
+.is-dblue:hover {
+  background-color: rgb(70, 114, 136);
+  color: azure;
+}
+
+.with-bg {
+  background-image: url(media/graphics/texture.png)
+}
+
+.fig-text {
+  text-align: center;
+  color: azure;
+}
+
+.footer {
+  font-family: 'Montserrat';
+  background-color: #35586A;
+  padding: 2rem;
+  padding-bottom: 50px;
+}
+
+.breadcrumb a {
+  color: azure;
+}
+
+.breadcrumb a:hover {
   color:rgb(173, 184, 184);
 }

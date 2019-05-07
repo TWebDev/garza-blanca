@@ -42,7 +42,7 @@ const Nav = () => {
                             RENTALS
                         </a>
                         <a className="navbar-item">
-                            <button className='button'>
+                            <button className='button button-nav'>
                                 CONTACT US
                             </button>
                         </a>

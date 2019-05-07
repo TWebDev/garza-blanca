@@ -7,8 +7,11 @@
     "paroller.js": "^1.4.6",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-redux": "^7.0.3",
     "react-scripts": "3.0.0",
-    "react-scroll-parallax": "^2.1.2"
+    "react-scroll-parallax": "^2.1.2",
+    "redux": "^4.0.1",
+    "simple-parallax-js": "^4.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
