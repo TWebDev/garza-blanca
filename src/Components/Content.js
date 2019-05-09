@@ -1,6 +1,9 @@
 import React from 'react';
 import Gb1 from '../media/images/gb1.png';
 import Gb2 from '../media/images/gb2.png';
+import Prod1 from '../media/images/gbprod1.png'
+import Prod2 from '../media/images/gbprod2.png'
+import Prod3 from '../media/images/gbprod3.png'
 import Hotel from '../media/graphics/hotel.png'
 import { Parallax } from 'react-scroll-parallax';
 
@@ -49,15 +52,103 @@ const Content = () => {
       </div>
       <div className='columns'>
         <div className='column box card is-transparent'>
-          <p className='h1'>
-            LOREM IPSUM
-          </p>
-          <p className='box-text'>
-            Lorem ipsum dolor sit amet consectetur adipiscing
-          </p>
-          <button className='button button-content is-dblue'>
-            HOW?
-          </button>
+          <div className='columns'>
+            <div className='column'>
+              <p className='h1'>
+                LOREM IPSUM
+              </p>
+              <p className='box-text'>
+                Lorem ipsum dolor sit amet consectetur adipiscing
+              </p>
+              <button className='button button-content is-dblue'>
+                HOW?
+              </button>
+            </div>
+            <div className='column'>
+              <div className='columns'>
+                <div className='column'>
+                  <div className='field'>
+                    <p className='control has-icons-left'>
+                      <input className='input' type='name' placeholder='Your Name'/>
+                      <span className='icon is-small is-left'>
+                        <i className='fas fa-user-check'></i>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div className='column'>
+                  <div className='field'>
+                    <p className='control'>
+                      <input className='input' type='name' placeholder='Last Name'/>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className='columns'>
+                <div className='column'>
+                  <div className='field'>
+                    <p className='control has-icons-left'>
+                      <input className='input' type='phone' placeholder='+1 123 456 7890'/>
+                      <span className='icon is-small is-left'>
+                        <i className='fas fa-phone'></i>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div className='column'>
+                  <div className='field'>
+                    <p className='control has-icons-left'>
+                      <input className='input' type='email' placeholder='your_email@mail.com'/>
+                      <span className='icon is-small is-left'>
+                        <i className='fas fa-envelope-open'></i>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className='columns'>
+                <div className='column'>
+                  <p>Would you like to own a property in Mexico?</p>
+                </div>
+                <div className='column'>
+                  <div className='control'>
+                    <label className='radio'>
+                      <input type='radio' name='Property'/>
+                        Yes
+                    </label>
+                    <label className='radio'>
+                      <input type='radio' name='Property'/>
+                        No
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div className='columns'>
+                <div className='column'>
+                  <p>Is your anual budget $500,000 or more?</p>
+                </div>
+                <div className='column'>
+                  <div className='control'>
+                    <label className='radio'>
+                      <input type='radio' name='Budget'/>
+                        Yes
+                    </label>
+                    <label className='radio'>
+                      <input type='radio' name='Budget'/>
+                        No
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div className='columns'>
+                <div className='column'>
+                  <button className='button button-content'>
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div className='columns'>
@@ -65,8 +156,8 @@ const Content = () => {
           <div className='columns'>
             <div className='column'>
               <div className='content'>
-                <figure class="image is-3by2">
-                  <img src="https://bulma.io/images/placeholders/480x320.png" />
+                <figure className="image is-3by2 img-sh">
+                  <img src={Prod1} />
                 </figure>
                 <p className='is-large fig-text'>
                   Lorem ipsum dolor sit amet consectetur adipiscing
@@ -75,8 +166,8 @@ const Content = () => {
             </div>
             <div className='column'>
               <div className='content'>
-                <figure class="image is-3by2">
-                  <img src="https://bulma.io/images/placeholders/480x320.png" />
+                <figure className="image is-3by2 img-sh">
+                  <img src={Prod2} />
                 </figure>
                 <p className='is-large fig-text'>
                   Lorem ipsum dolor sit amet consectetur adipiscing
@@ -85,8 +176,8 @@ const Content = () => {
             </div>
             <div className='column'>
               <div className='content'>
-                <figure class="image is-3by2">
-                  <img src="https://bulma.io/images/placeholders/480x320.png" />
+                <figure className="image is-3by2 img-sh">
+                  <img src={Prod3} />
                 </figure>
                 <p className='is-large fig-text'>
                   Lorem ipsum dolor sit amet consectetur adipiscing
