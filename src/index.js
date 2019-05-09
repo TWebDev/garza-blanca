@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './Container/App';
+import App from './Containers/App';
 import '../node_modules/bulma/css/bulma.css';
 import './index.css';
 import { createStore } from 'redux';

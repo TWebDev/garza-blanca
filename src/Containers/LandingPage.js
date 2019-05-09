@@ -1,11 +1,10 @@
 import React from 'react';
 
-function Form() {
+const LandingPage = () => {
   return (
     <React.Fragment>
-      
     </React.Fragment>
   );
 }
 
-export default Form;
+export default LandingPage;
