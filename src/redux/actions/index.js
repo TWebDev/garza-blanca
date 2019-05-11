@@ -1,10 +1,10 @@
 import {
-    MODAL_OPENER
+    TOGGLE_BURGER
 } from './actionTypes'
 
-export const modalOpener = (event) => {
+export const toggleBurger = (event) => {
     return {
-        type: MODAL_OPENER,
+        type: TOGGLE_BURGER,
         payload: event
     }
 }

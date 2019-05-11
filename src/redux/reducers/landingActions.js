@@ -1,19 +1,19 @@
 import {
-    MODAL_OPENER
+    TOGGLE_BURGER
 } from '../actions/actionTypes'
 
 const INITIAL_STATE = {
-    modalIo: false
+    burgerActive: false
 }
 
 export default (state = INITIAL_STATE, action) => {
-    let { modalIo } = state
+    let { burgerActive } = state
 
     switch (action.type) {
-        case MODAL_OPENER:
-            modalIo = true
+        case TOGGLE_BURGER:
+        burgerActive = !burgerActive
             return {
-                ...state, modalIo
+                ...state, burgerActive
             }
     
         default:

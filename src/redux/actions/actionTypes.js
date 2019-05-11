@@ -1,1 +1,1 @@
-export const MODAL_OPENER = 'modalOpener'
+export const TOGGLE_BURGER = 'toggleBurger'

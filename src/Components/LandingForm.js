@@ -1,6 +1,6 @@
 import React from 'react';
 
-function LandingForm() {
+const LandingForm = () => {
   return (
     <React.Fragment>
       

@@ -6,11 +6,17 @@ import './index.css';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux'
 import reducers from './redux/reducers'
+import { BrowserRouter } from 'react-router-dom'
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 ReactDOM.render(
     <Provider 
     store={createStore(reducers)}>
-        <App />
+        <BrowserRouter>
+            <ParallaxProvider>
+                <App />
+            </ParallaxProvider>
+        </BrowserRouter>
     </Provider>
     , document.getElementById('root')
 );

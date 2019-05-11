@@ -1,0 +1,123 @@
+* {
+  font-family: 'Montserrat';
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+}
+
+button:focus {
+  outline: none;
+}
+
+.is-block {
+  width: 100%;
+}
+
+.is-secondary {
+  background-color: #05CCAF;
+}
+
+.navbar-item img {
+  max-height: 3rem;
+}
+
+.nav-button {
+  padding: 0 1rem;
+  font-size: 0.9rem;
+}
+
+.is-transparent {
+  background-color: transparent;
+}
+
+a.navbar-item:hover {
+  background-color: transparent;
+  color: rgb(182, 194, 194);
+}
+
+.is-main-mobile {
+  background-color: #35586A;
+}
+
+.button.is-secondary{
+  margin-left: 2rem;
+}
+
+.is-main {
+  background: -moz-linear-gradient(top, rgba(53,88,106,1) 0%, rgba(53,88,106,0.38) 62%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(53,88,106,1) 0%,rgba(53,88,106,0.38) 62%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(53,88,106,1) 0%,rgba(53,88,106,0.38) 62%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35586a', endColorstr='#00ffffff',GradientType=0 ); 
+}
+
+@media screen and (min-width: 1088px){
+  .navbar.is-spaced {
+    padding: 1rem 6rem;
+  }
+}
+
+@media screen and (max-width: 1087px){
+  .navbar-menu {
+    background-color: transparent;
+    color: azure;
+  }
+}
+
+.button {
+  border-radius: 0px;
+  border: 1px;
+  color: azure;
+}
+
+.navbar-burger {
+  height: 4rem;
+  width: 4rem;
+  color: azure;
+}
+
+.navbar-burger:hover {
+  color: azure;
+}
+
+#navMenu {
+  padding: 0px 0px;
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+div.parallax-outer div.parallax-inner img {
+  width: 100%;
+}
+
+.is-absolute {
+  position: absolute;
+}
+
+.is-first-hero {
+  margin-top: 100px;
+}
+
+h1.title {
+  text-align: center;
+  color: azure;
+}
+.center-container {
+  display: flex;
+  justify-content: center;
+}
+
+.center-button {
+  display: block;
+}

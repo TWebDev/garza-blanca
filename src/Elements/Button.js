@@ -2,11 +2,14 @@ import React from 'react'
 
 const Button = (props) => {
 
-    let {children} = props
+    let {children, Style} = props
 
     return(
         <React.Fragment>
-            <a className={"button is-primary"}>{children}</a>
+            <button className={Style}>
+            
+                {children}
+            </button>
         </React.Fragment>
     )
 }
