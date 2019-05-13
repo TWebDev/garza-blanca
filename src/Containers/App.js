@@ -13,6 +13,8 @@ const App = () => {
         </Nav>
         <LandingPage> 
         </LandingPage>
+        <Footer>
+        </Footer>
     </React.Fragment>
   );
 }

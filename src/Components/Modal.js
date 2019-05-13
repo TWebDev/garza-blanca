@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LandingForm = () => {
+const Modal = () => {
   return (
     <React.Fragment>
       
@@ -8,4 +8,4 @@ const LandingForm = () => {
   );
 }
 
-export default LandingForm;
+export default Modal;

@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 import * as actions from '../../redux/actions'
 import GBlogo from '../../Design/icons/logo.png';
 
-import Button from '../../Elements/Button'
 import MobileNav from './MobileNav'
 import DeskMenu from "./DeskMenu";
 
@@ -21,7 +20,7 @@ const Nav = (props) => {
                     <Link to='/' className='navbar-item'>
                         <img src={GBlogo} alt="GB-logo" />
                     </Link>
-                    <button onClick={toggleBurger} role='button' className={burgerActive ? ('navbar-burger is-active') : ('navbar-burger')} aria-label='menu' aria-expanded='false' data-target='navMenu'>
+                    <button onClick={toggleBurger} className={burgerActive ? ('navbar-burger is-active') : ('navbar-burger')} aria-label='menu' aria-expanded='false' data-target='navMenu'>
                         <span aria-hidden='false'></span>
                         <span aria-hidden='false'></span>
                         <span aria-hidden='false'></span>
