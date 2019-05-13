@@ -5,7 +5,6 @@ import * as actions from '../redux/actions'
 
 import Button from '../Elements/Button'
 import Card from '../Elements/Card'
-import Modal from '../Components/Modal'
 
 import GB1 from '../Design/images/gb1.png'
 import GB2 from '../Design/images/gb2.png'
