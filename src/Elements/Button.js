@@ -2,11 +2,11 @@ import React from 'react'
 
 const Button = (props) => {
 
-    let {children, Style} = props
+    let {children, Style, clickHandler} = props
 
     return(
         <React.Fragment>
-            <button className={Style}>
+            <button className={Style} onClick={clickHandler}>
             
                 {children}
             </button>

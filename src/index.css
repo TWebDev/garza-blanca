@@ -127,11 +127,16 @@ h1.title {
 
 .insideStyles {
   position: "absolute";
-  transform: "translate(-50%,-50%)";
+
 }
 
 .is-gold {
   background-color: #7F724D;
+}
+
+.is-darken-gold {
+  background-color: rgb(95, 85, 58);
+  border: none;
 }
 
 .is-vcentered{
@@ -174,4 +179,36 @@ img.react-parallax-bgimage {
 
 .footer {
   padding: 3rem 1.5rem 3rem
+}
+
+.is-flex {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select select {
+  background-color: rgb(73, 66, 45);;
+  color: azure;
+  border: none;
+}
+
+.select:not(.is-multiple):not(.is-loading)::after {
+  border-color: azure;
+  right: 1.125em;
+  z-index: 4;
+}
+
+.select select:focus, .select select.is-focused, .select select:active, .select select.is-active {
+  border-color: none;
+  box-shadow: none;
+}
+
+.padded {
+  margin-right: 0.75rem;
+}
+
+.modal-card-foot {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top: none;
 }

@@ -2,11 +2,11 @@ import React from 'react';
 
 const Icon = (props) => {
 
-    let { style } = props
+    let { Style } = props
     return (
         <React.Fragment>
-            <span className="icon">
-                <i className={style}></i>
+            <span className="icon is-small is-left">
+                <i className={Style}></i>
             </span>
         </React.Fragment>
     )
