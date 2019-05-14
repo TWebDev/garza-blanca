@@ -1,2 +1,7 @@
 export const TOGGLE_BURGER = 'toggleBurger'
 export const TOGGLE_MODAL = 'toggleModal'
+export const UPDATE_FORM_NAME = 'updateFormName'
+export const UPDATE_FORM_LAST = 'updateFormLast'
+export const UPDATE_FORM_PHONE = 'updateFormPhone'
+export const UPDATE_FORM_EMAIL = 'updateFormEmail'
+export const HANDLE_OPTION_CHANGE = 'handleOptionChange'
