@@ -29,7 +29,7 @@ const Form = (props) => {
 
     if ( nameVal && lastVal && phoneVal && mailVal && changeRadio ) {
 
-      return ('button is-secondary');
+      return ('button is-secondary has-shadow');
 
     } else {
 
@@ -39,11 +39,11 @@ const Form = (props) => {
   }
 
   const labelStyle = 'label has-text-white'
-  const controlIcon = 'control has-icons-left'
+  const controlIcon = 'control has-icons-left has-shadow'
 
   return (
     <React.Fragment>
-      <form action='https://formsapi.jabwn.com/key/rBovDyngk2LNyHUDpAzt' method='POST'>
+      <form action='https://formsapi.jabwn.com/key/KTRNfXYpM895H6fWn7q9' method='POST'>
         <div className="level">
           <div className="level-left">
             <div className="level-item">
@@ -79,7 +79,7 @@ const Form = (props) => {
             </div>
             <div className="level">
               <div className="select">
-               <select className='select' name='En cuanto tiempo planea invertir'>
+               <select className='select ' name='En cuanto tiempo planea invertir'>
                 <option value='0 - 6 Months' name='En cuanto tiempo planea invertir'>0 - 6 Months</option>
                 <option value='6 - 12 Months' name='En cuanto tiempo planea invertir'>6 - 12 Months</option>
                 <option value='More than a year' name='En cuanto tiempo planea invertir'>More than a year</option>

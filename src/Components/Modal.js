@@ -32,7 +32,7 @@ const Modal = (props) => {
 
     if ( nameVal && lastVal && phoneVal && mailVal && changeRadio ) {
 
-      return ('button is-secondary');
+      return ('button is-secondary has-shadow');
 
     } else {
 
@@ -42,7 +42,7 @@ const Modal = (props) => {
   }
 
   const labelStyle = 'label has-text-white'
-  const controlIcon = 'control has-icons-left'
+  const controlIcon = 'control has-icons-left has-shadow'
 
   return (
     <React.Fragment>
@@ -50,7 +50,7 @@ const Modal = (props) => {
         <div className="modal-background" onClick={toggleModal}></div>
         <div className="modal-close" onClick={toggleModal}></div>
         <div className="modal-content">
-          <form action='https://formsapi.jabwn.com/key/rBovDyngk2LNyHUDpAzt' method='POST'>
+          <form action='https://formsapi.jabwn.com/key/KTRNfXYpM895H6fWn7q9' method='POST'>
             <Card Style='box is-radiusless is-gold'>
               <section className="modal-card-body is-darken-gold">
                 <div className="field">
@@ -124,7 +124,7 @@ const Modal = (props) => {
                     <label className={labelStyle}>How far from now are you planning to invest?</label>
                   </div>
                   <div className="select">
-                   <select className='select' name='En cuanto tiempo planea invertir'>
+                   <select className='select ' name='En cuanto tiempo planea invertir'>
                     <option value='0 - 6 Months' name='Planea invertir en 3 meses'>0 - 6 Months</option>
                     <option value='6 - 12 Months' name='Planea invertir en 6 meses'>6 - 12 Months</option>
                     <option value='More than a year' name='Planea invertir en 1 año'>More than a year</option>

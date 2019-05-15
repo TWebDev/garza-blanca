@@ -42,7 +42,7 @@ const LandingPage = (props) => {
                 <p className='is-pulled-left has-text-white'> 
                 While a bank trust, also known as <strong className='has-text-white'>fideicomiso</strong>, may sound too complicated, we can assure the process is not as complex or time consuming as you may think. Although it is necessary to buy land in Mexico if you are not a citizen.
                 </p>
-                <Button Style='button is-secondary is-pulled-left hovered' clickHandler={toggleModal}>
+                <Button Style='button is-secondary is-pulled-left has-shadow' clickHandler={toggleModal}>
                   Contact Us
                   </Button>
               </div>
@@ -53,7 +53,7 @@ const LandingPage = (props) => {
               </figure>
             </div>
           </div>
-          <div className="section is-darken-gold box margin-bottom show-resolution">
+          <div className="section is-darken-gold box margin-bottom show-resolution has-inshadow">
             <div className="level">
               <div className="level-left">
                 <div className="level-item">
@@ -85,7 +85,7 @@ const LandingPage = (props) => {
                 <br/>
                 Finally your dream of living in paradise can become reality, and we are here to help you make it happen.
               </p>
-              <Button Style='button is-blue'>
+              <Button Style='button is-blue has-shadow'>
                 HOW?
               </Button>
             </div>
@@ -100,13 +100,8 @@ const LandingPage = (props) => {
                 <Card Styles='card'>
                   <div className="card-image">
                     <figure className='image is-5by3'>
-                      <img className='hovered' src={img1} alt='Gbroom1' />
+                      <img className='hovered has-shadow' src={img1} alt='Gbroom1' />
                     </figure>
-                  </div>
-                  <div className="card-content">
-                    <div className="content has-text-justified hovered">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Id deserunt recusandae praesentium eveniet facilis?
-                    </div>
                   </div>
                 </Card>
               </div>
@@ -116,13 +111,8 @@ const LandingPage = (props) => {
                 <Card Styles='card'>
                   <div className="card-image">
                     <figure className='image is-5by3'>
-                      <img className='hovered' src={img2} alt='Gbroom2' />
+                      <img className='hovered has-shadow' src={img2} alt='Gbroom2' />
                     </figure>
-                  </div>
-                  <div className="card-content">
-                    <div className="content has-text-justified hovered">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Id deserunt recusandae praesentium eveniet facilis?
-                    </div>
                   </div>
                 </Card>
               </div>
@@ -132,13 +122,8 @@ const LandingPage = (props) => {
                 <Card Styles='card'>
                   <div className="card-image">
                     <figure className='image is-5by3'>
-                      <img className='hovered' src={img3} alt='Gbroom3' />
+                      <img className='hovered has-shadow' src={img3} alt='Gbroom3' />
                     </figure>
-                  </div>
-                  <div className="card-content">
-                    <div className="content has-text-justified">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Id deserunt recusandae praesentium eveniet facilis?
-                    </div>
                   </div>
                 </Card>
               </div>

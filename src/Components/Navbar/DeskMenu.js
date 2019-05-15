@@ -15,7 +15,7 @@ const DeskMenu = (props) => {
     <React.Fragment>
       <div className="navbar-menu">
         <div className="navbar-end">
-          <Button Style='button is-secondary' clickHandler={toggleModal}>
+          <Button Style='button is-secondary has-shadow' clickHandler={toggleModal}>
             <p className='is-size-7'><strong>CONTACT US</strong></p>
           </Button>
         </div>
