@@ -45,7 +45,7 @@ export default (state = INITIAL_STATE, action) => {
             }
 
         case HANDLE_OPTION_CHANGE:
-            let changeRadio
+            let changeRadio;
             changeRadio = true;
             
             return {

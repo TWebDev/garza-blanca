@@ -217,6 +217,6 @@ img.react-parallax-bgimage {
   border-top: none;
 }
 
-.hovered {
-  position: relative;
+.hovered:hover {
+  filter: blur(1)
 }

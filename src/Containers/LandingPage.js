@@ -43,7 +43,7 @@ const LandingPage = (props) => {
                   LOREM TITLE
                   </h1>
                 <p className='is-pulled-left has-text-white'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam similique dolorum necessitatibus! Facilis unde est enim obcaecati dolorum mollitia aliquid delectus, provident ratione corrupti quibusdam quisquam iusto cupiditate, recusandae quos! </p>
-                <Button Style='button is-secondary is-pulled-left' clickHandler={toggleModal}>
+                <Button Style='button is-secondary is-pulled-left hovered' clickHandler={toggleModal}>
                   Contact Us
                   </Button>
               </div>
