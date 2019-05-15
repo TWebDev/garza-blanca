@@ -66,6 +66,12 @@ a.navbar-item:hover {
 
 }
 
+@media screen and (max-width: 1280px){
+  .show-resolution {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1087px){
   .navbar-menu {
     color: azure;
@@ -164,7 +170,7 @@ img.react-parallax-bgimage {
 }
 
 .w-margin-v {
-  margin: 200px 0;
+  margin: 100px 0;
 }
 
 .plants-bg {
@@ -220,3 +226,17 @@ img.react-parallax-bgimage {
 .hovered:hover {
   filter: blur(1)
 }
+
+.padded-left {
+  padding-left: 20px;
+}
+
+.revert {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.margin-bottom {
+  margin-bottom: 3rem;
+}
+

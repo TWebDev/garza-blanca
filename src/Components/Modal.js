@@ -125,9 +125,9 @@ const Modal = (props) => {
                   </div>
                   <div className="select">
                    <select className='select' name='En cuanto tiempo planea invertir'>
-                    <option value='3 months' name='Planea invertir en 3 meses'>3 Months</option>
-                    <option value='6 months' name='Planea invertir en 6 meses'>6 Months</option>
-                    <option value='1 year' name='Planea invertir en 1 año'>1 Year</option>
+                    <option value='0 - 6 Months' name='Planea invertir en 3 meses'>0 - 6 Months</option>
+                    <option value='6 - 12 Months' name='Planea invertir en 6 meses'>6 - 12 Months</option>
+                    <option value='More than a year' name='Planea invertir en 1 año'>More than a year</option>
                    </select>
                   </div>
                 </div>
@@ -136,9 +136,10 @@ const Modal = (props) => {
                     <label className={labelStyle}>What is your budget?</label>
                   </div>
                   <div className="select">
-                    <select className='select' name='Califica por presupuesto'>
-                      <option value='Non Qualifier' name='No Califica'>Below $499,999</option>
-                      <option value='Qualifier' name='Califica'>Up $500,000</option>
+                    <select className='select' name='Presupuesto'>
+                      <option value='Up to $500,000' name='Presupuesto'>Up to $500,000</option>
+                      <option value='$500,000 to $1 Million' name='Presupuesto'>$500,000 to $1 Million</option>
+                      <option value='More than $1 Million' name='Presupuesto'>More than $1 Million</option>
                     </select>
                   </div>
                 </div>

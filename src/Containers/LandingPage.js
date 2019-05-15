@@ -5,6 +5,7 @@ import * as actions from '../redux/actions'
 
 import Button from '../Elements/Button'
 import Card from '../Elements/Card'
+import Form from '../Components/Form'
 
 import GB1 from '../Design/images/gb1.png'
 import GB2 from '../Design/images/gb2.png'
@@ -22,27 +23,25 @@ const LandingPage = (props) => {
         <div className="container is-first-hero insideStyles" style={{ height: 250 }}>
           <div className="content is-small">
             <h1 className="title">
-              BUYING A PROPERTY IN MEXICO IS POSSIBLE
+              Buying a property in Mexico is possible
                 <br />
-              THE ONLY THINFG YOU NEED IS A BANK TRUST.
+                <br/>
+              THE ONLY THING YOU NEED IS A BANK TRUST.
             </h1>
-          </div>
-          <div className="box is-transparent has-text-centered">
-            <Button Style='button is-secondary'>
-              Find out How
-            </Button>
           </div>
         </div>
       </Parallax>
       <Card Style='box is-radiusless is-gold'>
-        <div className="container">
+        <div className="container revert">
           <div className="columns is-desktop">
             <div className="column is-vcentered">
               <div className="content">
                 <h1 className="title is-pulled-left">
-                  LOREM TITLE
+                  BANK TRUST?
                   </h1>
-                <p className='is-pulled-left has-text-white'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam similique dolorum necessitatibus! Facilis unde est enim obcaecati dolorum mollitia aliquid delectus, provident ratione corrupti quibusdam quisquam iusto cupiditate, recusandae quos! </p>
+                <p className='is-pulled-left has-text-white'> 
+                While a bank trust, also known as <strong className='has-text-white'>fideicomiso</strong>, may sound too complicated, we can assure the process is not as complex or time consuming as you may think. Although it is necessary to buy land in Mexico if you are not a citizen.
+                </p>
                 <Button Style='button is-secondary is-pulled-left hovered' clickHandler={toggleModal}>
                   Contact Us
                   </Button>
@@ -54,17 +53,37 @@ const LandingPage = (props) => {
               </figure>
             </div>
           </div>
+          <div className="section is-darken-gold box margin-bottom show-resolution">
+            <div className="level">
+              <div className="level-left">
+                <div className="level-item">
+                  <h1 className="is-size-3 has-text-white">
+                    Contact us to know more
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <Form>
+
+            </Form>
+          </div>
         </div>
       </Card>
       <Parallax bgImage={GB2} strenght={500} blur={{ min: -2, max: 10 }}>
-        <div className="container insideStyles" style={{ height: 250 }}>
+        <div className="container insideStyles" style={{ height: 300 }}>
           <div className="column is-vcentered w-margin-v">
             <div className="content has-text-centered">
               <h1 className="title">
-                LOREM IPSUM
+                STILL HAVE DOUBTS?
               </h1>
               <p className="has-text-white">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Don’t worry we have a team of experts ready to help you out.
+                <br/>
+                <br/>
+                Your real estate agent will work hand in hand with the Notario Publico, or notary, to smooth out your process. 
+                <br/>
+                <br/>
+                Finally your dream of living in paradise can become reality, and we are here to help you make it happen.
               </p>
               <Button Style='button is-blue'>
                 HOW?
