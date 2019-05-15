@@ -22,9 +22,9 @@ const LandingPage = (props) => {
         <div className="container is-first-hero insideStyles" style={{ height: 250 }}>
           <div className="content is-small">
             <h1 className="title">
-              Looking to own a property 
+              BUYING A PROPERTY IN MEXICO IS POSSIBLE
                 <br />
-              in Puerto Vallarta?
+              THE ONLY THINFG YOU NEED IS A BANK TRUST.
             </h1>
           </div>
           <div className="box is-transparent has-text-centered">
