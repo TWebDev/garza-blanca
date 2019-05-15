@@ -52,7 +52,7 @@ a.navbar-item:hover {
 
 
 
-@media screen and (min-width: 1088px){
+@media screen and (min-width: 1086px){
   .navbar.is-spaced {
     padding: 1rem 6rem;
   }
@@ -72,6 +72,10 @@ a.navbar-item:hover {
   }
   .navbar-brand {
     background-color: #35586A;
+  }
+
+  .show-ondesk {
+    display: none;
   }
 }
 
@@ -211,4 +215,8 @@ img.react-parallax-bgimage {
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   border-top: none;
+}
+
+.hovered {
+  position: relative;
 }

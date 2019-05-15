@@ -86,7 +86,7 @@ const Modal = (props) => {
                 <div className="field">
                   <label className={labelStyle}>E-mail</label>
                   <div className={controlIcon}>
-                    <input className={mailVal ? ("input is-success") : ("input is-danger")} type="email" placeholder='your_email@mailme.com' name='_replyto'
+                    <input className={mailVal ? ("input is-success") : ("input is-danger")} type="email" placeholder='your_email@mailme.com' name='email'
                       value={formFieldSet.emailValue || ''}
                       onChange={(e) => updateFormEmail (e)}   
                     />

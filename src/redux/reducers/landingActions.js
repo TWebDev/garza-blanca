@@ -21,7 +21,7 @@ const INITIAL_STATE = {
 }
 
 export default (state = INITIAL_STATE, action) => {
-    let { formFieldSet, burgerActive, modalActive, changeRadio } = state;
+    let { formFieldSet, burgerActive, modalActive } = state;
     const cloneState = () => {
         formFieldSet = Object.assign({}, formFieldSet);
         return {
@@ -105,31 +105,6 @@ export default (state = INITIAL_STATE, action) => {
             return {
                 ...state, formFieldSet, mailVal
             }
-
-        /*case VALIDATE_FORM:
-            
-            formFieldSet.nameValue = formFieldSet.nameValue.replace(/\s/g,'');
-            formFieldSet.lastValue = formFieldSet.lastValue.replace(/\s/g,'');
-            formFieldSet.phoneValue = formFieldSet.phoneValue.replace(/\s/g,'');
-            formFieldSet.emailValue = formFieldSet.emailValue.replace(/\s/g,'');
-
-            if (formFieldSet.nameValue && 
-                formFieldSet.lastValue && 
-                formFieldSet.phoneValue && 
-                formFieldSet.emailValue &&
-                changeRadio) {
-                
-            }
-
-            if (condition) {
-                
-            } else {
-                
-            }
-            
-            return {
-                ...state, 
-            }*/
 
         default:
             return state;

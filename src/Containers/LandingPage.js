@@ -81,11 +81,11 @@ const LandingPage = (props) => {
                 <Card Styles='card'>
                   <div className="card-image">
                     <figure className='image is-5by3'>
-                      <img src={img1} alt='Gbroom1' />
+                      <img className='hovered' src={img1} alt='Gbroom1' />
                     </figure>
                   </div>
                   <div className="card-content">
-                    <div className="content has-text-justified">
+                    <div className="content has-text-justified hovered">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Id deserunt recusandae praesentium eveniet facilis?
                     </div>
                   </div>
@@ -97,11 +97,11 @@ const LandingPage = (props) => {
                 <Card Styles='card'>
                   <div className="card-image">
                     <figure className='image is-5by3'>
-                      <img src={img2} alt='Gbroom2' />
+                      <img className='hovered' src={img2} alt='Gbroom2' />
                     </figure>
                   </div>
                   <div className="card-content">
-                    <div className="content has-text-justified">
+                    <div className="content has-text-justified hovered">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Id deserunt recusandae praesentium eveniet facilis?
                     </div>
                   </div>
@@ -113,7 +113,7 @@ const LandingPage = (props) => {
                 <Card Styles='card'>
                   <div className="card-image">
                     <figure className='image is-5by3'>
-                      <img src={img3} alt='Gbroom3' />
+                      <img className='hovered' src={img3} alt='Gbroom3' />
                     </figure>
                   </div>
                   <div className="card-content">

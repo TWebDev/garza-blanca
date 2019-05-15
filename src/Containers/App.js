@@ -15,11 +15,13 @@ const App = (props) => {
     <React.Fragment>
       <Nav>
       </Nav>
-      <LandingPage> 
-      </LandingPage>
-      <Footer>
-      </Footer>
-      <Modal toggleClass={modalActive ? ('modal is-active') : ('modal')}></Modal>
+      <div className='show-ondesk'>
+        <LandingPage> 
+        </LandingPage>
+        <Footer>
+        </Footer>
+        <Modal toggleClass={modalActive ? ('modal is-active') : ('modal')}></Modal>
+      </div>
     </React.Fragment>
   );
 }
