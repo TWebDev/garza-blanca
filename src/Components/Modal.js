@@ -52,7 +52,7 @@ const Modal = (props) => {
         <div className="modal-content">
           <form action='https://formsapi.jabwn.com/key/KTRNfXYpM895H6fWn7q9' method='POST'>
             <Card Style='box is-radiusless is-gold'>
-              <section className="modal-card-body is-darken-gold">
+              <section className="modal-card-body is-darken-gold has-inshadow">
                 <div className="field">
                   <label className={labelStyle}>Name</label>
                   <div className={controlIcon}>

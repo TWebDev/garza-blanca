@@ -92,7 +92,7 @@ const LandingPage = (props) => {
           </div>
         </div>
       </Parallax>
-      <Card Style='box is-radiusless plants-bg'>
+      <Card Style='box is-radiusless plants-bg has-shadow'>
         <div className="container">
           <div className="columns is-desktop">
             <div className="column is-vcentered">
@@ -101,6 +101,7 @@ const LandingPage = (props) => {
                   <div className="card-image">
                     <figure className='image is-5by3'>
                       <img className='hovered has-shadow' src={img1} alt='Gbroom1' />
+                      <div className="overlay"><a href="https://www.garzablancarealestate.com/"><Button Style='button is-secondary has-shadow i-onhover'>View More</Button></a></div>
                     </figure>
                   </div>
                 </Card>
@@ -112,6 +113,7 @@ const LandingPage = (props) => {
                   <div className="card-image">
                     <figure className='image is-5by3'>
                       <img className='hovered has-shadow' src={img2} alt='Gbroom2' />
+                      <div className="overlay"><a href="https://www.garzablancarealestate.com/"><Button Style='button is-secondary has-shadow i-onhover'>View More</Button></a></div>
                     </figure>
                   </div>
                 </Card>
@@ -123,6 +125,7 @@ const LandingPage = (props) => {
                   <div className="card-image">
                     <figure className='image is-5by3'>
                       <img className='hovered has-shadow' src={img3} alt='Gbroom3' />
+                      <div className="overlay"><a href='https://www.garzablancarealestate.com/'><Button Style='button is-secondary has-shadow i-onhover'>View More</Button></a></div>                
                     </figure>
                   </div>
                 </Card>
