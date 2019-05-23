@@ -19,7 +19,7 @@ const Number = (props) => {
         <div className="modal-content">
           <Card Style='box is-radiusless is-gold'>
             <section className='modal-card-body is-darken-gold has-inshadow'>
-              <h1 className="title">+1 123 456 7890</h1>
+              <h1 className="title">+1 844 598 3564</h1>
               <hr className="is-divider"></hr>
               <p className='has-text-white is-flex'>Call toll free!</p>
             </section>

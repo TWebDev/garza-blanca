@@ -19,8 +19,8 @@ const LandingPage = (props) => {
   let { toggleModal, toggleNumber } = props
   return (
     <React.Fragment>
-      <Parallax bgImage={GB1} strenght={500}>
-        <div className="container is-first-hero insideStyles" style={{ height: 250 }}>
+      <Parallax bgImage={GB1} strenght={100}>
+        <div className="container is-first-hero insideStyles" style={{ height: 300 }}>
           <div className="content is-small">
             <h1 className="title">
               Purchase a property in Mexico is possible
@@ -53,7 +53,7 @@ const LandingPage = (props) => {
               </figure>
             </div>
           </div>
-          <div className="section is-darken-gold box margin-bottom show-resolution has-inshadow">
+          <div className="section is-darken-gold box margin-bottom show-resolution has-shadow is-radiusless">
             <div className="level">
               <div className="level-left">
                 <div className="level-item">
@@ -69,7 +69,7 @@ const LandingPage = (props) => {
           </div>
         </div>
       </Card>
-      <Parallax bgImage={GB2} strenght={500} blur={{ min: -2, max: 10 }}>
+      <Parallax bgImage={GB2} strenght={100} blur={{ min: -2, max: 10 }}>
         <div className="container insideStyles" style={{ height: 300 }}>
           <div className="column is-vcentered w-margin-v">
             <div className="content has-text-centered">
