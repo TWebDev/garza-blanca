@@ -16,17 +16,17 @@ import Hotel from '../Design/icons/hotel.png'
 
 const LandingPage = (props) => {
 
-  let { toggleModal } = props
+  let { toggleModal, toggleNumber } = props
   return (
     <React.Fragment>
       <Parallax bgImage={GB1} strenght={500}>
         <div className="container is-first-hero insideStyles" style={{ height: 250 }}>
           <div className="content is-small">
             <h1 className="title">
-              Buying a property in Mexico is possible
+              Purchase a property in Mexico is possible
                 <br />
                 <br/>
-              THE ONLY THING YOU NEED IS A BANK TRUST.
+              THE ONLY THING YOU NEED IS A DEED OF TRUST.
             </h1>
           </div>
         </div>
@@ -37,10 +37,10 @@ const LandingPage = (props) => {
             <div className="column is-vcentered">
               <div className="content">
                 <h1 className="title is-pulled-left">
-                  BANK TRUST?
+                  DEED OF TRUST?
                   </h1>
                 <p className='is-pulled-left has-text-white'> 
-                While a bank trust, also known as <strong className='has-text-white'>fideicomiso</strong>, may sound too complicated, we can assure the process is not as complex or time consuming as you may think. Although it is necessary to buy land in Mexico if you are not a citizen.
+                While a deed of trust also known as <strong className='has-text-white'>fideicomiso</strong>, may sound too complicated, we can assure the process is not as complex or time consuming as you may think. Although it is necessary to buy land in Mexico if you are not a citizen.
                 </p>
                 <Button Style='button is-secondary is-pulled-left has-shadow' clickHandler={toggleModal}>
                   Contact Us
@@ -77,16 +77,16 @@ const LandingPage = (props) => {
                 STILL HAVE DOUBTS?
               </h1>
               <p className="has-text-white">
-                Don’t worry we have a team of experts ready to help you out.
+                Don’t worry we have a team of specialists ready to help you out.
                 <br/>
                 <br/>
-                Your real estate agent will work hand in hand with the Notario Publico, or notary, to smooth out your process. 
+                Your real estate agent will work hand by hand with the <strong className='has-text-white'>Notario Publico</strong> (or notary), to smooth out your process. 
                 <br/>
                 <br/>
                 Finally your dream of living in paradise can become reality, and we are here to help you make it happen.
               </p>
-              <Button Style='button is-blue has-shadow'>
-                HOW?
+              <Button Style='button is-blue has-shadow' clickHandler={toggleNumber}>
+                Call an Expert
               </Button>
             </div>
           </div>
@@ -139,8 +139,8 @@ const LandingPage = (props) => {
 }
 
 const mapStateToProps = ({ landingActions }) => {
-  const { modalActive } = landingActions
-  return { modalActive }
+  const { modalActive, numberActive } = landingActions
+  return { modalActive, numberActive }
 }
 
 export default connect(mapStateToProps, actions)(LandingPage)

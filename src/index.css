@@ -1,10 +1,11 @@
 * {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
 }
 
 button {
   background-color: transparent;
   border: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 button:focus {
@@ -17,10 +18,11 @@ button:focus {
 
 .is-secondary {
   background-color: #05CCAF;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .navbar-item img {
-  max-height: 3rem;
+  max-height: 5rem;
 }
 
 .nav-button {
@@ -48,6 +50,7 @@ a.navbar-item:hover {
 
 .button.is-secondary{
   background-color: #05CCAF;
+  font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -167,6 +170,7 @@ img.react-parallax-bgimage {
 
 .is-blue {
   background-color: #35586A;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .w-margin-v {
@@ -192,7 +196,7 @@ img.react-parallax-bgimage {
 }
 
 .is-flex {
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -267,4 +271,18 @@ img.react-parallax-bgimage {
   text-align: center;
   opacity: 0;
   transition: opacity .35s ease;
+}
+
+.response {
+  color: azure;
+  font-size: 0.75rem;
+  display: inline;
+}
+
+input {
+  font-family: 'Montserrat', sans-serif;
+}
+
+div.columns.is-flex div.field:not(:last-child) {
+  margin-bottom: 0;
 }

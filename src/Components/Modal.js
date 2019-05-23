@@ -1,10 +1,15 @@
 import React from 'react';
-import { connect } from 'react-redux'
-import * as actions from '../redux/actions'
+import { connect } from 'react-redux';
+import * as actions from '../redux/actions';
 
-import Card from '../Elements/Card'
-import Icon from '../Elements/Icon'
-import Button from '../Elements/Button'
+import Card from '../Elements/Card';
+import Button from '../Elements/Button';
+
+import Field from './FormItems/Field';
+import Radio from "./FormItems/Radio";
+import DropDown from "./FormItems/DropDown";
+import Select from './FormItems/Select';
+import CheckBox from './FormItems/CheckBox';
 
 const Modal = (props) => {
   
@@ -13,6 +18,7 @@ const Modal = (props) => {
 
     toggleClass, 
     toggleModal,
+    toggleThankYou,
     changeRadio,
     nameVal,
     lastVal,
@@ -26,7 +32,7 @@ const Modal = (props) => {
     updateFormEmail,
     
   } 
-    = props
+    = props;
 
   const validateForm = () => {
 
@@ -49,131 +55,161 @@ const Modal = (props) => {
       <div className={toggleClass}>
         <div className="modal-background" onClick={toggleModal}></div>
         <div className="modal-close" onClick={toggleModal}></div>
-        <div className="modal-content">
-          <form action='https://formsapi.jabwn.com/key/KTRNfXYpM895H6fWn7q9' method='POST'>
-            <Card Style='box is-radiusless is-gold'>
+        <div className="modal-content mc_embed_signup">
+          <form action='https://gmail.us20.list-manage.com/subscribe/post?u=18fc1557072305c8be7a46adb&amp;id=a8290878ac' 
+            method='post' id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className='validate' target="_blank" 
+            novalidate>
+            <Card Style='box is-radiusless is-gold' id='mc_embed_signup_scroll'>
               <section className="modal-card-body is-darken-gold has-inshadow">
-                <div className="field">
-                  <label className={labelStyle}>Name</label>
-                  <div className={controlIcon}>
-                    <input className={nameVal ? ("input is-success") : ("input is-danger")} type="text" placeholder="Your name" name='name'
-                      value={formFieldSet.nameValue || ''}
-                      onChange={(e) => updateFormName(e)}
-                    />
-                    <Icon Style='fas fa-user'></Icon>
-                  </div>
-                </div>
-                <div className="field">
-                  <label className={labelStyle}>Last Name</label>
-                  <div className={controlIcon}>
-                    <input className={lastVal ? ("input is-success") : ("input is-danger")} type="text" placeholder="Your last name" name='last_name'
-                      value={formFieldSet.lastValue || ''}
-                      onChange={(e) => updateFormLast(e)}
-                    />
-                    <Icon Style='fas fa-user'></Icon>
-                  </div>
-                </div>
-                <div className="field">
-                  <label className={labelStyle}>Phone Number</label>
-                  <div className={controlIcon}>
-                    <input className={phoneVal ? ("input is-success") : ("input is-danger")} type="text" placeholder="1 123 456 7890" name='phone_number'
-                      value={formFieldSet.phoneValue || ''}
-                      onChange={(e) => updateFormPhone(e)}
-                    />
-                    <Icon Style='fas fa-phone'></Icon>
-                  </div>
-                </div>
-                <div className="field">
-                  <label className={labelStyle}>E-mail</label>
-                  <div className={controlIcon}>
-                    <input className={mailVal ? ("input is-success") : ("input is-danger")} type="email" placeholder='your_email@mailme.com' name='email'
-                      value={formFieldSet.emailValue || ''}
-                      onChange={(e) => updateFormEmail (e)}   
-                    />
-                    <Icon Style='fas fa-at'></Icon>
-                  </div>
-                </div>
+                
+                  {/* First Name */}
+                <Field
+                  _Id = 'mce-FNAME'
+                  Name = 'FNAME'
+                  Type = 'text'
+                  InputCSS = { nameVal ? ('input is-success') : ('input is-danger') }
+                  labelCSS = { labelStyle }
+                  controlIcon = { controlIcon }
+                  iconCSS = 'fas fa-user'
+                  PlaceHolder = 'Type your Name'
+                  inputValue = { formFieldSet.nameValue || '' }
+                  inputHandler = { (e) => updateFormName(e) }
+                >
+                  First Name
+                </Field>
+
+                  {/* Last Name */}
+                <Field
+                  _id = 'mce-LNAME'
+                  Name = 'LNAME'
+                  Type = 'text'
+                  InputCSS = { lastVal ? ('input is-success') : ('input is-danger') }
+                  labelCSS = { labelStyle }
+                  controlIcon = { controlIcon }
+                  iconCSS = 'fas fa-user'
+                  PlaceHolder = 'Type your Last Name'
+                  inputValue = { formFieldSet.lastValue || '' }
+                  inputHandler = { (e) => updateFormLast(e) }
+                >
+                  Last Name
+                </Field>
+
+                  {/* Phone Number */}
+                <Field
+                  _id = 'mce-MMERGE5'
+                  Name = 'MMERGE5'
+                  Type = 'text'
+                  InputCSS = { phoneVal ? ('input is-success') : ('input is-danger') }
+                  labelCSS = { labelStyle }
+                  controlIcon = { controlIcon }
+                  iconCSS = 'fas fa-phone'
+                  PlaceHolder = '123 456 7890'
+                  inputValue = { formFieldSet.phoneValue || '' }
+                  inputHandler = { (e) => updateFormPhone(e) }
+                >
+                  Phone Number
+                </Field>
+
+                  {/* Email */}
+                <Field
+                  _id = 'mce-EMAIL'
+                  Name = 'EMAIL'
+                  Type = 'email'
+                  InputCSS = { mailVal ? ('input is-success') : ('input is-danger') }
+                  labelCSS = { labelStyle }
+                  controlIcon = { controlIcon }
+                  iconCSS = 'fas fa-at'
+                  PlaceHolder = 'youremail@mailme.com'
+                  inputValue = { formFieldSet.emailValue || '' }
+                  inputHandler = { (e) => updateFormEmail(e) }
+                >
+                  Email
+                </Field>
+
                 <hr className="is-divider"></hr>
-                <div className="control has-text-white is-flex is-size-5 field">
-                  <div>
-                    <label className={labelStyle}>Have you ever been in Puerto Vallarta?</label>
-                  </div>
-                  <div>
-                    <div className="label has-text-white">
-                      <label className="radio">
-                        <input className='padded' type="radio" name="been_inPV"
-                          value={changeRadio}
-                          onChange={handleOptionChange}
-                        />
-                        Yes
-                      </label>
-                    </div>
-                    <div className="label has-text-white">
-                      <label className="radio">
-                        <input className='padded' type="radio" name="been_inPV"
-                          value={changeRadio}
-                          onChange={handleOptionChange}
-                        />
-                        No
-                      </label>
-                    </div>
-                  </div>
+
+                <div className="columns is-flex">
+                    {/* Invest Plan Dropdown */}
+                  <DropDown
+                    Name = 'MMERGE7'
+                    _id = 'mce-MMERGE7'
+                    val1 = '0 - 6 Months'
+                    val2 = '6 - 12 Months'
+                    val3 = '1 year or more'
+                    labelStyle={ labelStyle }
+                  >
+                    When are you planning to invest?
+                  </DropDown>
+
+                    {/* Budget Dropdown */}
+                  <DropDown
+                    Name = 'MMERGE8'
+                    _id = 'mce-MMERGE8'
+                    val1 = 'Up to $500,000'
+                    val2 = '$500,000 - $1M'
+                    val3 = 'More than $1M'
+                    labelStyle = { labelStyle }
+                  >
+                    What is your budget
+                  </DropDown>
                 </div>
-                <div className="is-flex field">
-                  <div>
-                    <label className={labelStyle}>How far from now are you planning to invest?</label>
-                  </div>
-                  <div className="select">
-                   <select className='select ' name='En cuanto tiempo planea invertir'>
-                    <option value='0 - 6 Months' name='Planea invertir en 3 meses'>0 - 6 Months</option>
-                    <option value='6 - 12 Months' name='Planea invertir en 6 meses'>6 - 12 Months</option>
-                    <option value='More than a year' name='Planea invertir en 1 año'>More than a year</option>
-                   </select>
-                  </div>
+                
+                  {/* Radio Options */}
+                <Radio
+                  _idOpt1 = 'mce-MMERGE6-0'
+                  Val1 = 'Yes'
+                  _idOpt2 =  'mce-MMERGE6-1'
+                  Val2 = 'No'
+                  labelStyle = { labelStyle }
+                  Name = 'MMERGE6'
+                  handleRadio = {(e) => handleOptionChange(e)}
+                >
+                  Have you ever been to Puerto Vallarta?
+                </Radio>
+                
+                  {/* Multiselect boxes */}
+                <Select
+                  labelStyle = { labelStyle }
+                >
+                  Do you know another destination in Mexico? Which one?
+                </Select>
+                <div className="label has-text-white">
+                  <CheckBox
+                    _id = 'mce-group[3545]-3545-0'
+                    Type = 'checkbox'
+                    Value = '1'
+                    Name = 'group[3545][1]'
+                  >
+                    Cancun
+                  </CheckBox>
+                  <CheckBox
+                    _id = 'mce-group[3545]-3545-1'
+                    Type = 'checkbox'
+                    Value = '2' 
+                    Name = 'group[3545][2]'
+                  >
+                    Loreto
+                  </CheckBox>
+                  <CheckBox
+                    _id = 'mce-group[3545]-3545-2'
+                    Type = 'checkbox'
+                    Value = '4' 
+                    Name = 'group[3545][4]'
+                  >
+                    Los Cabos
+                  </CheckBox>
                 </div>
-                <div className="is-flex field">
-                  <div>
-                    <label className={labelStyle}>What is your budget?</label>
-                  </div>
-                  <div className="select">
-                    <select className='select' name='Presupuesto'>
-                      <option value='Up to $500,000' name='Presupuesto'>Up to $500,000</option>
-                      <option value='$500,000 to $1 Million' name='Presupuesto'>$500,000 to $1 Million</option>
-                      <option value='More than $1 Million' name='Presupuesto'>More than $1 Million</option>
-                    </select>
-                  </div>
-                </div>
-                <div className="is-flex field">
-                  <div>
-                    <label className={labelStyle}>Do you know another destinations in Mexico? Which Ones?</label>
-                  </div>
-                </div>
-                <div className="is-flex field has-text-white label">
-                  <div>
-                    <label className="checkbox">
-                      <input className='padded' type="checkbox" name='Fue a Cancun'/>
-                      Cancun
-                    </label>
-                  </div>
-                  <div>
-                    <label className="checkbox">
-                      <input className='padded' type="checkbox" name='Fue a Los Cabos'/>
-                      Los Cabos
-                    </label>
-                  </div>
-                  <div>
-                    <label className="checkbox">
-                      <input className='padded' type="checkbox" name='Fue a Loreto'/>
-                      Loreto
-                    </label>
-                  </div>
-                </div>
+
               </section>
               <hr className="is-divider"></hr>
               <footer className="modal-card-foot is-gold is-radiusless">
-                <div>
-                  <Button type='submit' value='Send' Style={validateForm()}>Submit</Button>
-                </div>
+
+                  <Button type='submit' value='Subscribe' name="subscribe" id="mc-embedded-subscribe"
+                    Style={validateForm()}
+                    >
+                      Submit
+                  </Button>
+
               </footer>
             </Card>
           </form>
@@ -187,6 +223,7 @@ const mapStateToProps = ({ landingActions }) => {
   const { 
     modalActive,
     changeRadio,
+    thankYouActive,
     nameVal,
     lastVal,
     phoneVal,
@@ -196,6 +233,7 @@ const mapStateToProps = ({ landingActions }) => {
   return { 
     modalActive,
     changeRadio,
+    thankYouActive,
     nameVal, 
     lastVal,
     phoneVal,

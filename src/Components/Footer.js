@@ -7,10 +7,10 @@ const Footer = () => {
 
     return (
       <React.Fragment>
-        <footer className="footer is-blue">
+        <footer className="footer is-darken-gold">
             <nav className="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
               <ul>
-                <li><Link to='/' className={btnClass}>Go Up</Link></li>
+                <li><a href='_top' className={btnClass}>Go Up</a></li>
               </ul>
             </nav>
         </footer>

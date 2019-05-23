@@ -5,13 +5,18 @@ import {
     UPDATE_FORM_LAST,
     UPDATE_FORM_PHONE,
     UPDATE_FORM_EMAIL,
-    HANDLE_OPTION_CHANGE
+    HANDLE_OPTION_CHANGE,
+    TOGGLE_THANK_YOU,
+    TOGGLE_NUMBER
 } from '../actions/actionTypes';
 
 const INITIAL_STATE = {
     burgerActive: false,
     modalActive: false,
+    changeRadio: false,
     formValidation: false,
+    thankYouActive: false,
+    numberActive: false,
     formFieldSet: {
         nameValue: '',
         lastValue: '',
@@ -21,7 +26,7 @@ const INITIAL_STATE = {
 }
 
 export default (state = INITIAL_STATE, action) => {
-    let { formFieldSet, burgerActive, modalActive } = state;
+    let { formFieldSet, burgerActive, modalActive, changeRadio, thankYouActive, numberActive } = state;
     const cloneState = () => {
         formFieldSet = Object.assign({}, formFieldSet);
         return {
@@ -43,9 +48,22 @@ export default (state = INITIAL_STATE, action) => {
             return {
                 ...state, modalActive
             }
+        
+        case TOGGLE_THANK_YOU:
+            thankYouActive = !thankYouActive;
+
+            return {
+                ...state, thankYouActive
+            }
+
+        case TOGGLE_NUMBER:
+            numberActive = !numberActive;
+
+            return {
+                ...state, numberActive
+            }
 
         case HANDLE_OPTION_CHANGE:
-            let changeRadio;
             changeRadio = true;
             
             return {
@@ -89,6 +107,13 @@ export default (state = INITIAL_STATE, action) => {
 
             if (invalidChars.test(formFieldSet.phoneValue)) {
                 formFieldSet.phoneValue = formFieldSet.phoneValue.replace(invalidChars, "");
+                phoneVal = false;
+            }
+
+            if (formFieldSet.phoneValue.length >= 10) {
+                formFieldSet.phoneValue = formFieldSet.phoneValue.substring(0 , 10);
+            } else {
+                phoneVal = false;
             }
 
             return {
@@ -99,8 +124,12 @@ export default (state = INITIAL_STATE, action) => {
             let mailVal;
             cloneState();
 
+            var mailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
             formFieldSet.emailValue = action.payload.target.value;
             formFieldSet.emailValue.replace(/\s/g, '').length ? mailVal= true : mailVal = false;
+
+            mailRegex.test(formFieldSet.emailValue) ? mailVal = true : mailVal = false;
 
             return {
                 ...state, formFieldSet, mailVal

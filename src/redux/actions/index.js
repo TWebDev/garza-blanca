@@ -5,7 +5,9 @@ import {
     UPDATE_FORM_LAST,
     UPDATE_FORM_PHONE,
     UPDATE_FORM_EMAIL,
-    HANDLE_OPTION_CHANGE
+    HANDLE_OPTION_CHANGE,
+    TOGGLE_THANK_YOU,
+    TOGGLE_NUMBER
 } from './actionTypes'
 
 export const toggleBurger = (event) => {
@@ -18,6 +20,20 @@ export const toggleBurger = (event) => {
 export const toggleModal = (event) => {
     return {
         type: TOGGLE_MODAL,
+        payload: event
+    }
+}
+
+export const toggleThankYou = (event) => {
+    return {
+        type: TOGGLE_THANK_YOU,
+        payload: event
+    }
+}
+
+export const toggleNumber = (event) => {
+    return {
+        type: TOGGLE_NUMBER,
         payload: event
     }
 }
