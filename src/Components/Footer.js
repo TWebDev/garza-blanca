@@ -10,7 +10,7 @@ const Footer = () => {
         <footer className="footer is-darken-gold">
             <nav className="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
               <ul>
-                <li><a href='_top' className={btnClass}>Go Up</a></li>
+                <li><a href='garzablancaexperts.com' className={btnClass}>Go Up</a></li>
               </ul>
             </nav>
         </footer>
