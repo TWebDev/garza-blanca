@@ -69,22 +69,64 @@ a.navbar-item:hover {
 
 }
 
-@media screen and (max-width: 1280px){
-  .show-resolution {
+@media only screen and (min-width: 1025px){
+  .mobile-version {
     display: none;
   }
 }
 
-@media screen and (max-width: 1087px){
+@media only screen and (max-width: 1025px){
+  div.select {
+    background-color: #05CCAF;
+  }
+  div.select select {
+    background-color: #05CCAF;
+  }
   .navbar-menu {
     color: azure;
   }
   .navbar-brand {
     background-color: #35586A;
   }
-
   .show-ondesk {
     display: none;
+  }
+  .bg-header {
+    background-color: #05CCAF;
+    height: 8em;
+  }
+  .navbar-item img {
+    max-height: 3rem;
+  }
+  .flex-column {
+    flex-direction: column;
+  }
+  .show {
+    padding: 20px;
+    animation-name: unscroll;
+    animation-duration: 1s;
+  }
+  .hide {
+    display: none;
+  }
+  @keyframes unscroll {
+    from {
+      opacity: 0;
+      height: 0;
+    }
+    to {
+      opacity: 1;
+      height: 950px;
+    }
+  }
+  .top-margin {
+    margin-top: 4rem;
+  }
+  .left-margin {
+    margin-left: 8px;
+  }
+  .know-more {
+    color: #35586A;
   }
 }
 
@@ -286,3 +328,4 @@ input {
 div.columns.is-flex div.field:not(:last-child) {
   margin-bottom: 0;
 }
+

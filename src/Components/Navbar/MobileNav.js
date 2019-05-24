@@ -11,28 +11,10 @@ const MobileNav = (props) => {
     <React.Fragment>
       <div className={ validationHandler } id='navMenu'>
         <Button Style={ btnClass }>
-          Features
-        </Button>
-        <Button Style={ btnClass }>
-          Residences
-        </Button>
-        <Button Style={ btnClass }>
-          Ownership
-        </Button>
-        <Button Style={ btnClass }>
-          Future Developments
-        </Button>
-        <Button Style={ btnClass }>
-          Try & Buy
-        </Button>
-        <Button Style={ btnClass }>
-          Photos
-        </Button>
-        <Button Style={ btnClass }>
-          Rentals
+          <a href="https://www.garzablancarealestate.com" className='has-text-white'>Go to our site</a>
         </Button>
         <Button Style='button is-block is-primary'>
-          Contact Us
+          <a href="tel: +1 844 598 3564" className='has-text-white'>Contact us</a>
         </Button>
       </div>
     </React.Fragment>

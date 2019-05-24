@@ -4,34 +4,34 @@ import * as actions from '../redux/actions';
 
 import Card from '../Elements/Card';
 import Button from '../Elements/Button';
+import Field from '../Components/FormItems/Field';
+import DropDown from '../Components/FormItems/DropDown';
+import Radio from '../Components/FormItems/Radio';
+import Select from '../Components/FormItems/Select';
+import CheckBox from '../Components/FormItems/CheckBox';
 
-import Field from './FormItems/Field';
-import Radio from "./FormItems/Radio";
-import DropDown from "./FormItems/DropDown";
-import Select from './FormItems/Select';
-import CheckBox from './FormItems/CheckBox';
-
-const Modal = (props) => {
-  
-  let { 
+const Mobile = (props) => {
+  let
+  {
     formFieldSet,
 
-    toggleClass, 
-    toggleModal,
+    mobileForm,
+
     changeRadio,
     nameVal,
     lastVal,
     phoneVal,
     mailVal,
 
+    toggleMobileForm,
     handleOptionChange,
     updateFormName, 
     updateFormLast, 
     updateFormPhone,
     updateFormEmail,
-    
-  } 
-    = props;
+  } = props;
+
+  
 
   const validateForm = () => {
 
@@ -46,21 +46,36 @@ const Modal = (props) => {
     }
   }
 
-  const labelStyle = 'label has-text-white'
-  const controlIcon = 'control has-icons-left has-shadow'
+  const labelStyle = 'label has-text-white';
+  const controlIcon = 'control has-icons-left has-shadow';
 
   return (
     <React.Fragment>
-      <div className={toggleClass}>
-        <div className="modal-background" onClick={toggleModal}></div>
-        <div className="modal-close" onClick={toggleModal}></div>
-        <div className="modal-content mc_embed_signup">
-          <form action='https://gmail.us20.list-manage.com/subscribe/post?u=18fc1557072305c8be7a46adb&amp;id=a8290878ac' 
-            method='post' id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className='validate' target="_blank" 
+      
+      {/* Header */}
+    <div className="box is-radiusless bg-header is-flex">
+      <Button Style='button is-blue top-margin'>
+        <i className='fas fa-phone'></i>
+        <span className='left-margin'>
+          <a href="tel: +1 844 598 3564" className='has-text-white '>Call us now!</a>
+        </span>
+      </Button>
+    </div>
+    <Card Style='box is-radiusless is-gold'>
+      <h1 className="title is-size-5">Purchase a property in Mexico is possible</h1>
+      <hr className="is-divider"></hr>
+      <h1 className="title is-size-4">The only thing you need is a Deed of Trust</h1>
+    </Card>
+    <Card Style='box is-radiusless is-blue is-flex flex-column'>
+      <h1 className="title">Deed of Trust?</h1>
+      <p className='has-text-white has-text-justified'>While a deed of trust also known as fideicomiso, may sound too complicated, we can assure the process is not as complex or time consuming as you may think. Although it is necessary to buy land in Mexico if you are not a citizen.</p>
+      <div>
+        <div className="mc_embed_signup">
+          <form action="https://gmail.us20.list-manage.com/subscribe/post?u=18fc1557072305c8be7a46adb&amp;id=a8290878ac"
+            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank"
             novalidate>
-            <Card Style='box is-radiusless is-gold' id='mc_embed_signup_scroll'>
-              <section className="modal-card-body is-darken-gold has-inshadow">
-                
+            <div className="columns">
+              <div className={`"column" ${ mobileForm ? ('show') : ('hide') }`}>
                   {/* First Name */}
                 <Field
                   _Id = 'mce-FNAME'
@@ -127,32 +142,31 @@ const Modal = (props) => {
 
                 <hr className="is-divider"></hr>
 
-                <div className="columns is-flex">
-                    {/* Invest Plan Dropdown */}
-                  <DropDown
-                    Name = 'MMERGE7'
-                    _id = 'mce-MMERGE7'
-                    val1 = '0 - 6 Months'
-                    val2 = '6 - 12 Months'
-                    val3 = '1 year or more'
-                    labelStyle={ labelStyle }
-                  >
-                    When are you planning to invest?
-                  </DropDown>
+                  {/* Invest Plan Dropdown */}
+                <DropDown
+                  Name = 'MMERGE7'
+                  _id = 'mce-MMERGE7'
+                  val1 = '0 - 6 Months'
+                  val2 = '6 - 12 Months'
+                  val3 = '1 year or more'
+                  labelStyle={ labelStyle }
+                >
+                  When are you planning to invest?
+                </DropDown>
+                  {/* Budget Dropdown */}
+                <DropDown
+                  Name = 'MMERGE8'
+                  _id = 'mce-MMERGE8'
+                  val1 = 'Up to $500,000'
+                  val2 = '$500,000 - $1M'
+                  val3 = 'More than $1M'
+                  labelStyle = { labelStyle }
+                >
+                  What is your budget
+                </DropDown>
 
-                    {/* Budget Dropdown */}
-                  <DropDown
-                    Name = 'MMERGE8'
-                    _id = 'mce-MMERGE8'
-                    val1 = 'Up to $500,000'
-                    val2 = '$500,000 - $1M'
-                    val3 = 'More than $1M'
-                    labelStyle = { labelStyle }
-                  >
-                    What is your budget
-                  </DropDown>
-                </div>
-                
+                <hr className="is-divider"></hr>
+
                   {/* Radio Options */}
                 <Radio
                   _idOpt1 = 'mce-MMERGE6-0'
@@ -165,8 +179,8 @@ const Modal = (props) => {
                 >
                   Have you ever been to Puerto Vallarta?
                 </Radio>
-                
-                  {/* Multiselect boxes */}
+
+                {/* Multiselect boxes */}
                 <Select
                   labelStyle = { labelStyle }
                 >
@@ -197,47 +211,73 @@ const Modal = (props) => {
                   >
                     Los Cabos
                   </CheckBox>
-                </div>
 
-              </section>
-              <hr className="is-divider"></hr>
-              <footer className="modal-card-foot is-gold is-radiusless">
+                  <hr className="is-divider"></hr>
 
                   <Button type='submit' value='Subscribe' name="subscribe" id="mc-embedded-subscribe"
                     Style={validateForm()}
+                    clickHandler={toggleMobileForm}
                     >
                       Submit
                   </Button>
 
-              </footer>
-            </Card>
+                </div>
+              </div>
+            </div>
+
           </form>
         </div>
       </div>
+      <span className={mobileForm ? ('know-more') : ('has-text-white')}>Click to know more</span>
+      <Button clickHandler={toggleMobileForm}>
+        <span className='icon has-text-white'>
+          <i className={mobileForm ? ('fas fa-chevron-up') : ('fas fa-chevron-down')}></i>
+        </span>
+      </Button>
+    </Card>
+    <Card Style='box is-radiusless plants-bg is-flex flex-column'>
+      <h1 className="title">
+        Still have doubts?
+      </h1>
+      <p className='has-text-white has-text-justified'>
+        Don’t worry we have a team of specialists ready to help you out.
+        Your real estate agent will work hand by hand with the Notario Publico (or notary), to smooth out your process.
+        Finally your dream of living in paradise can become reality, and we are here to help you make it happen.
+      </p>
+      <Button Style='button is-blue top-margin'>
+        <i className='fas fa-phone'></i>
+        <span className='left-margin'>
+          <a href="tel: +1 844 598 3564" className='has-text-white '>Call an expert</a>
+        </span>
+      </Button>
+    </Card>
+    <div className="box is-radiusless is-secondary"></div>
     </React.Fragment>
-  );
+  )
 }
 
 const mapStateToProps = ({ landingActions }) => {
-  const { 
-    modalActive,
+  const {
+    mobileForm,
     changeRadio,
     thankYouActive,
     nameVal,
     lastVal,
     phoneVal,
     mailVal,
-    formFieldSet } 
-      = landingActions
-  return { 
-    modalActive,
+    formFieldSet
+  } = landingActions
+  return {
+    mobileForm,
+    mobileForm,
     changeRadio,
     thankYouActive,
-    nameVal, 
+    nameVal,
     lastVal,
     phoneVal,
     mailVal,
-    formFieldSet }
+    formFieldSet
+  }
 }
 
-export default connect(mapStateToProps, actions)(Modal)
+export default connect(mapStateToProps, actions)(Mobile);

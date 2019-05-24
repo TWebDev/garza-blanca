@@ -7,7 +7,8 @@ import {
     UPDATE_FORM_EMAIL,
     HANDLE_OPTION_CHANGE,
     TOGGLE_THANK_YOU,
-    TOGGLE_NUMBER
+    TOGGLE_NUMBER,
+    TOGGLE_MOBILE_FORM
 } from './actionTypes'
 
 export const toggleBurger = (event) => {
@@ -34,6 +35,13 @@ export const toggleThankYou = (event) => {
 export const toggleNumber = (event) => {
     return {
         type: TOGGLE_NUMBER,
+        payload: event
+    }
+}
+
+export const toggleMobileForm = (event) => {
+    return {
+        type: TOGGLE_MOBILE_FORM,
         payload: event
     }
 }

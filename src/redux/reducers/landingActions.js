@@ -7,7 +7,8 @@ import {
     UPDATE_FORM_EMAIL,
     HANDLE_OPTION_CHANGE,
     TOGGLE_THANK_YOU,
-    TOGGLE_NUMBER
+    TOGGLE_NUMBER,
+    TOGGLE_MOBILE_FORM
 } from '../actions/actionTypes';
 
 const INITIAL_STATE = {
@@ -17,6 +18,7 @@ const INITIAL_STATE = {
     formValidation: false,
     thankYouActive: false,
     numberActive: false,
+    mobileForm: false,
     formFieldSet: {
         nameValue: '',
         lastValue: '',
@@ -26,7 +28,15 @@ const INITIAL_STATE = {
 }
 
 export default (state = INITIAL_STATE, action) => {
-    let { formFieldSet, burgerActive, modalActive, changeRadio, thankYouActive, numberActive } = state;
+    let { 
+    formFieldSet,
+    burgerActive, 
+    modalActive, 
+    changeRadio, 
+    thankYouActive, 
+    numberActive,
+    mobileForm
+    } = state;
     const cloneState = () => {
         formFieldSet = Object.assign({}, formFieldSet);
         return {
@@ -61,6 +71,13 @@ export default (state = INITIAL_STATE, action) => {
 
             return {
                 ...state, numberActive
+            }
+        
+        case TOGGLE_MOBILE_FORM:
+            mobileForm = !mobileForm;
+
+            return {
+                ...state, mobileForm
             }
 
         case HANDLE_OPTION_CHANGE:

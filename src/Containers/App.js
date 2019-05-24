@@ -8,6 +8,7 @@ import { connect } from 'react-redux'
 import * as actions from '../redux/actions'
 import ThankYou from '../Components/ThankYou';
 import Number from '../Components/Number';
+import Mobile from './Mobile';
 
 
 const App = (props) => {
@@ -25,6 +26,10 @@ const App = (props) => {
         <Modal toggleClass={ modalActive ? ('modal is-active') : ('modal') }></Modal>
         <ThankYou toggleClass={ thankYouActive ? ('modal is-active') : ('modal') }></ThankYou>
         <Number toggleClass={ numberActive ? ('modal is-active') : ('modal') }></Number>
+      </div>
+      <div className="mobile-version">
+        <Mobile>
+        </Mobile>
       </div>
     </React.Fragment>
   );
