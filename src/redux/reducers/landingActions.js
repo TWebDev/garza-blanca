@@ -8,7 +8,7 @@ import {
     HANDLE_OPTION_CHANGE,
     TOGGLE_THANK_YOU,
     TOGGLE_NUMBER,
-    TOGGLE_MOBILE_FORM
+    TOGGLE_MOBILE_FORM,
 } from '../actions/actionTypes';
 
 const INITIAL_STATE = {
@@ -37,6 +37,7 @@ export default (state = INITIAL_STATE, action) => {
     numberActive,
     mobileForm
     } = state;
+
     const cloneState = () => {
         formFieldSet = Object.assign({}, formFieldSet);
         return {
@@ -45,6 +46,7 @@ export default (state = INITIAL_STATE, action) => {
     } 
 
     switch (action.type) {
+
         case TOGGLE_BURGER:
             burgerActive = !burgerActive;
 

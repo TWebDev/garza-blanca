@@ -7,12 +7,15 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from './redux/reducers';
 import { BrowserRouter } from 'react-router-dom';
+import ScrollToTop from './Elements/ScrollToTop';
 
 ReactDOM.render(
     <Provider 
     store={createStore(reducers)}>
         <BrowserRouter>
+
                 <App />
+
         </BrowserRouter>
     </Provider>
     , document.getElementById('root')

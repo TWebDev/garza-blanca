@@ -8,7 +8,7 @@ import {
     HANDLE_OPTION_CHANGE,
     TOGGLE_THANK_YOU,
     TOGGLE_NUMBER,
-    TOGGLE_MOBILE_FORM
+    TOGGLE_MOBILE_FORM,
 } from './actionTypes'
 
 export const toggleBurger = (event) => {

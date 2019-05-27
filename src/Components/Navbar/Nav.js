@@ -16,6 +16,7 @@ const Nav = (props) => {
     return (
         <React.Fragment>
             <nav className="navbar is-main is-spaced is-fixed-top is-expanded" role='navigation' aria-label='main navigation'>
+                <a href="index"></a>
                 <div className="navbar-brand">
                     <Link to='/' className='navbar-item'>
                         <img src={GBlogo} alt="GB-logo" />

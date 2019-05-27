@@ -1,8 +1,7 @@
-import React from 'react'
-import { Link, Route } from 'react-router-dom'
+import React from 'react';
+import { Link, Route } from 'react-router-dom';
 
 const Footer = () => {
-
   const btnClass = 'navbar-item button nav-button is-transparent'
 
     return (
@@ -10,7 +9,7 @@ const Footer = () => {
         <footer className="footer is-darken-gold">
             <nav className="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
               <ul>
-                <li><a href='garzablancaexperts.com' className={btnClass}>Go Up</a></li>
+                <li><a className={btnClass} onClick={() => { window.scrollTo(0,0) }}>Go Up</a></li>
               </ul>
             </nav>
         </footer>
