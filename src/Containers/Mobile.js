@@ -184,7 +184,7 @@ const Mobile = (props) => {
                 <Select
                   labelStyle = { labelStyle }
                 >
-                  Do you know another destination in Mexico? Which one?
+                  Have you ever been in another beach destination in México?
                 </Select>
                 <div className="label has-text-white">
                   <CheckBox
@@ -210,6 +210,22 @@ const Mobile = (props) => {
                     Name = 'group[3545][4]'
                   >
                     Los Cabos
+                  </CheckBox>
+                  <CheckBox
+                    _id = 'mce-group[3545]-3545-3'
+                    Type = 'checkbox'
+                    Value = '8' 
+                    Name = 'group[3545][8]'
+                  >
+                    Playa del Carmen
+                  </CheckBox>
+                  <CheckBox
+                    _id = 'mce-group[3545]-3545-4'
+                    Type = 'checkbox'
+                    Value = '16' 
+                    Name = 'group[3545][16]'
+                  >
+                    Other
                   </CheckBox>
 
                   <hr className="is-divider"></hr>

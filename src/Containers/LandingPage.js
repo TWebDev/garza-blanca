@@ -23,10 +23,10 @@ const LandingPage = (props) => {
         <div className="container is-first-hero insideStyles" style={{ height: 300 }}>
           <div className="content is-small">
             <h1 className="title">
-              Purchase a property in Mexico is possible
+              Purchasing a property in México is very easy.
                 <br />
                 <br/>
-              THE ONLY THING YOU NEED IS A DEED OF TRUST.
+              THE ONLY THING YOU NEED IS A TRUST DEED.
             </h1>
           </div>
         </div>
@@ -37,10 +37,10 @@ const LandingPage = (props) => {
             <div className="column is-vcentered">
               <div className="content">
                 <h1 className="title is-pulled-left">
-                  DEED OF TRUST?
+                  TRUST DEED?
                   </h1>
                 <p className='is-pulled-left has-text-white'> 
-                While a deed of trust also known as <strong className='has-text-white'>fideicomiso</strong>, may sound too complicated, we can assure the process is not as complex or time consuming as you may think. Although it is necessary to buy land in Mexico if you are not a citizen.
+                As a foreign, you will need a Trust Deed only when you purchase a property within 50km (aprox 31 miles) from the beach. We can assure the process is not as complex or time consuming as you may think.
                 </p>
                 <Button Style='button is-secondary is-pulled-left has-shadow' clickHandler={toggleModal}>
                   Contact Us
@@ -74,13 +74,13 @@ const LandingPage = (props) => {
           <div className="column is-vcentered w-margin-v">
             <div className="content has-text-centered">
               <h1 className="title">
-                STILL HAVE DOUBTS?
+                WOULD YOU LIKE MORE INFORMATION ABOUT OWNERSHIP?
               </h1>
               <p className="has-text-white">
-                Don’t worry we have a team of specialists ready to help you out.
+                We have a team of specialists ready to help you out.
                 <br/>
                 <br/>
-                Your real estate agent will work hand by hand with the <strong className='has-text-white'>Notario Publico</strong> (or notary), to smooth out your process. 
+                Your real estate agent will work hand in hand with the <strong className='has-text-white'>Notary</strong> (Notario Público).
                 <br/>
                 <br/>
                 Finally your dream of living in paradise can become reality, and we are here to help you make it happen.
