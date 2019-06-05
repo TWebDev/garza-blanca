@@ -3,4 +3,4 @@ import landingActions from './landingActions'
 
 export default combineReducers({
     landingActions
-})
+});
